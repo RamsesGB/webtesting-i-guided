@@ -18,7 +18,12 @@ describe('add()', function () {
     expect(add()).toBe(0);
   });
 
-  it.todo('add a collection of values');
+  it('add a collection of values', () => {
+    const expected = 500;
+    const actual = add(400, 50, 25, 25);
+    expect(actual).toBe(expected);
+    expect(add(1, 2, 3, -3)).toBe(3);
+  });
 });
 
 describe('multiply()', function () {
